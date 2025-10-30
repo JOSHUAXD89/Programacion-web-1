@@ -49,3 +49,80 @@ ID: Se usa la notación de #nombreId.
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 900;
 }
+
+/* 
+
+Selectores combinados
+
+ - Descendientes. Seleccionan elemntos dentro de otros elementos.
+
+    elementp elementointerno{
+    ...
+}
+*/
+
+section h2 {
+    color:rgb(255, 183, 0)
+}
+
+body .galeria{
+    border: none
+    background color rgb(255, 0, 208)
+}
+
+.galeria .monstruos {
+    border: none
+    background color rgb(73, 9, 98)
+}
+
+/* 
+
+Selectores combinados
+
+ - Hijo directo. Selecciona elementos que son hijos directos de un elemento padre.
+
+    elemrntoPadre > elementohijo {
+    ...
+}
+
+*/
+
+.monstruos > li {
+    border: none
+    text-align center
+    margin-botton 24px
+    background-color rgb(73, 9, 98)
+
+}
+
+/* 
+
+Selectores conectados
+
+ - Elemento adyacente. Selecciona el primer elemento inmediatamente después de otro elemento. Es decir su hermano inmediato.
+
+    elemento + elementoAdyacente {
+    ...
+    }
+
+*/
+
+.primer-hermano + li {
+    font-size: 2rem;
+    color: rgb(0, 238, 255);
+}
+
+/* 
+
+ Selectores combinados
+
+  -Hermanos General. Selecciona todos los hermanos después de un elemento.
+
+  elemento ~
+
+*/
+
+.primer-hermano ~ li {
+    font-family: monospace;
+    text-decoration: underline;
+}

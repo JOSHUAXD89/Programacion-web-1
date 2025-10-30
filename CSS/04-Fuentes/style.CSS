@@ -1,0 +1,85 @@
+/* 
+
+Fuentes
+
+Las fuentes son un aspecto fundamento del diseño web, influyen en la estética, legibilidad y jerarquía visual.
+
+Para definir una familia tipográfica usamos la propiedad;
+
+font-family: "Nombre de la tipografía"
+
+1- Web safe fonts: Fuentes web seguras. Son tipografías predeterminadas que se  pueden usar en cualquier dispositivo, sistema operativo o navegador web.
+
+Por estilo o categoría:
+
+ -serif
+ -sans-serif
+ -monospace
+ -cursive > script
+ -fantasy > script
+
+ Por nombre de la familia tipográfica
+
+ - Arial
+ - Times new roman
+ - Verdana
+ - Gevana
+ - Tahoma
+ ...
+
+ Los valores con un más de una palabra se escriben entre comillas dobles "" o simples ''
+
+ La recomendación es utilizar máximo 2 fuentes de respaldo, si por alguna razón no carga la principal se cargarán las secundarias. Los nombres se separán por comas.
+
+ */
+
+body {
+    font-family: serif; /* Default del user profile */
+    font-family: sans-serif;
+    font-family: monospace;
+    font-family: cursive;
+    font-family: fantasy;
+}
+
+h1 {
+    font-family: arial;
+    font-family: "Times New Roman";
+    font-family: Verdana;
+    font-family: Tahoma;
+    font-family: "Gill Sans";
+    font-family: Georgia, "Times New Roma", Times, serif;
+    font-family: "Lucina Sans", Arial, Sans-serif;
+}
+
+h2 {
+    font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+}
+
+/* 
+
+ 2. Fuentes personalizadas. Son fuentes que nosotros elegimos de acuerdo al estilo de la web o a los lineamientos de la marca gráfica.
+
+ - Fuentes externas: Se llaman a través de recursos en línea o servidores remotos. Por ejemplo Google Fonts
+
+ - Fuentes internas: Éstas se llaman a través de nuestras carpetas internas o de un servidor propio.
+
+*/
+
+/* 
+
+LLamamos a nuestra tpografía con la sentencia @font-face
+
+*/
+
+@font-face {
+    font-family: "Coolvetica Rg";
+    src: url(./Coolvetica\ Rg.otf), format("otf");
+}
+
+p { 
+    font-family: "Coolvetica Rg", Helvetica;
+}
