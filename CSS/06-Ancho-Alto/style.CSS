@@ -1,0 +1,62 @@
+body {
+    background-color: darkcyan;
+    font-family: Arial, Helvetica, sans-serif;
+    color: aqua;
+    margin: 0px;
+    height: 100vh; /*  U. Relatriva > Viewport Height */
+}
+
+/* 
+
+    Bloque y Línea
+
+    Los elementos de bloque miden todo el ancho disponible de su contenedor y los elementos de bloque miden el alto de su contenido.
+
+    Los elementos de línea miden el ancho y el alto de su contenido.
+
+    Ancho(width) y Alto(height)
+
+    Nos sirven para establecer las dimensiones de los elementos de html.
+
+    Width: Define el ancho y recibe valores en unidades en px, %, em, rem, auto.
+
+    Height: Define la altura y recibe valores en unidaades en px, %, em, rem, auto,
+
+    *Si no se especifíca la altira de un elemento de bloque, el el elemento ajustará su altura al contenido.
+
+    *Se recomienda usar unidades relativas para mejorar la adaptabilidad de los elementos de html.
+
+    Lois elementos de línea no reaccionan al ancho y alto específico. Por default se ajustará al contenido.
+
+    Si queremos que un elemento de línea responda al ancho y alto, necesitamos cambiar su comportamiento devisualización con la propiedad display.
+
+    Display: Determina el comportamiento de visualización de un elemento html. Recibe valores como: inline-black y black.
+
+*/
+
+/* Display: inline; > Esto cambia un elemento de bloque en uno de línea. */
+
+div {
+    background-color: rgb(0, 89, 255);
+    width: auto; /*  Default */
+    width: 300px; /*  U. Absoluta */
+    width: 50%; /*  U. Relativa */
+
+    height: auto; /*  Default */
+    height: 200px; /*  U. Absoluta */
+    height: 50%; /* U. Relativa > Funciona cuando el padre tiene una altura definida*/
+
+}
+
+span {
+    background-color: dodgerblue;
+    width: auto; /*  Defaulkt  */
+    width: 400px; /*  No funciona  */
+    width: 50%; 
+
+    height: auto; /*  Default > Depende de el contenido */
+    height: 500px; /*  No funciona */
+    height: 50%;
+
+    display: inline-block;
+}
