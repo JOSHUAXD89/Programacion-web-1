@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkorange;
+    font-family: helvetica;
+    color: fuchsia;
+}
+
+/* 
+
+Bordes redondeados
+
+Nos permite redondear las esquinas de los elementos de HTML.
+
+Shorthand
+
+border-radius: top-l top-r bottom-r bottom-l // 4 valores
+border-radius: top-l top-r/bottom-l buttom-r; // 3 valores
+border-radius: top-l/bottom-r top-r/bottom-l; // 2 valores
+border-radius: tl/tr/br/bl; // un valor
+
+Propiedades individuales.
+
+border-top-left-radius
+border-top-right-radius
+border-bottom-left-radius
+border-bottom-right-radius
+
+Desbordamiento.
+
+Es la propiedad que controla el comportamiento de un elemento cuando se desborda.
+
+Un contenido se desborda cuando sale de los bordes de la caja que lo contiene.
+
+Shorthand
+
+overflow: visible; // por defecto
+overflow: hidden ; // El contenido que se desborda se oculta a partir del borde del contenedor.
+overflow: scroll; // Se muestran las barras de scroll.
+overflow: auto; // El navegador decide si se muestran las barras de scroll o no.
+
+Propiedades individuales.
+
+overflow-x: valor;
+overflow-y: valor;
+
+*/
+
+.box {
+    width: 300px;
+    height: 300px;
+    color: aliceblue;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 40px;
+    display: inline-block;
+}
+
+.box-1 {
+    background-color: rgb(255, 0, 166);
+    border-radius: 24px;
+    border-radius: 24px 12px;
+    border-radius: 48px 12px 8px;
+    border-radius: 48px 24px 12px 8px;
+    
+    overflow: visible;
+    overflow: hidden;
+    overflow: scroll;
+}
+
+.box-2 {
+    background-color: rgb(0, 200, 255);
+    border-top-left-radius: 72px;
+    border-bottom-right-radius: 72px;
+
+    overflow: visible;
+    overflow: hidden;
+    overflow: scroll;
+}
+
+.box-3 {
+    background-color: rgb(153, 0, 255);
+    border-radius: 50%; /*  Círculo cuando es una caja cuadrada.  */
+    height: 400px;
+}
+
+img {
+    opacity: 1;
+}

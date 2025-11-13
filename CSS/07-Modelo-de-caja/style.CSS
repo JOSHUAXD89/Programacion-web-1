@@ -1,0 +1,152 @@
+
+/* 
+
+Box Sizing
+
+Es la propiedad que calcula las dimensiones de un elemento incluyendo el padding y el border.
+
+box-sizing: content-box; si a un elemento le agregamos padding y border, los valores se suman al total del ancho y el alto.
+
+box-sizing: border-box; Este valor modifica el comportamiento de la caja y no suma los alores de padding y border al ancho y el alto total de la caja.
+
+NOTA: Una práctica común es definirle a todos los elementos 
+
+}*/
+
+/* Resset Básico */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(40, 0, 30);
+    color: hotpink;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+i {
+    color: darkorange;
+}
+
+.card {
+
+    padding: 24px 20px 20px 20px;
+    width: 300px;
+    height: auto;
+    border: 8px;
+    background-color: rgb(33, 53, 78);
+    color: cyan;
+    display: inline-block;
+    margin: 24px 12px 24px
+}
+
+.card-title {
+    padding: 16px 0px;
+    font-size: 20px;
+    /* background-color: rgb(0, 116, 188); */
+}
+
+.card-description {
+   /*  background-color: blue; */
+    border-top-width: 2px;
+    border-top-style: solid;
+}
+
+.card-image {
+    margin: 24px 0px;
+    margin-bottom: 8px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 100%;
+    height: auto;
+   /*  background-color: rgb(0, 117, 180); */
+    display: block;
+}
+
+.cosas {
+    margin: 24px 0px;
+    margin-bottom: 8px;
+    /* background-color: darkslateblue; */
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: rgb(65, 214, 240);
+
+}
+
+ul {
+    list-style: none; /*  Quita los bulletss por default. */
+}
+
+/* 
+
+Modelo de caja (Modelo dde caja)
+
+Es un concepto fundamental de CSS que describe como los elementos de una página web se organiza y calculan el tamaño.
+
+1- Contenido.
+
+Es el área donde se encuentra el texto, las imágenes y algún otro elemento fijo. El tamaño de esta área se define con width y height.
+
+2- Relleno.
+
+Es el espaciado entre el contenido de la caja. Ayuda a crear un espacio interno al rededor del contenido.
+
+Esta propiedad es un shorthand o propiedad abreviada, que controla los 4 lados possibles de la caja.
+
+Shorthand:
+
+padding: top rigth button left; // 4 valores
+padding: top left/rigth buttom; // 3 valores
+padding: top/buttom left/rigth; // 2 valores
+padding: t/b/l/r; // un valor
+
+Propieddades individuales
+
+padding-top: valor;
+padding-rigth: valor;
+padding-buttom: valor;
+padding-left; valor;
+
+3- Borde.
+
+El espacio o el área que rodea al contenido y al padding. Podemos modificar su grosor, estilo de grosor, estilo y color.
+
+Shorthand:
+    Border: width style color;
+    border-style: valor
+    border-color: valor;
+
+    Propiedades por lado
+
+    Borde-top-order-style: valor
+    border-color: valor;
+
+Valores de estilo del brode:
+ 
+ Solid
+ dashed
+ none
+
+4- Margen
+
+Permite crear un espacio entre el borde de un elemento y otros elementos de la página.
+
+Shorthand
+
+margin: top rigth bottom left; // 4 valores
+margin: top  right/left bottom; // 3 valors
+margin: top/bottom rigth/left; // 2 valores
+margin: t/r/b/l // un valor
+
+Propiedades individuales
+
+margin-top: valor;
+margin-
+
+*/
