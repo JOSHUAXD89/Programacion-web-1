@@ -1,0 +1,120 @@
+/* 
+
+Posicipon
+Es la propiedad que permite posicionar los elementos en el HTML.
+
+Conceptos importantes:
+
+1- Flujo de renderizado: Los elementos se dibujan de izquierda a derecha y de arriba hacia abajo.
+
+2- Espacio reservado: Es el espacio que tiene un elemento asignado en el navegador.
+
+3- Elemento posicionado: Cuando su propiedad de psition tiene un valor distinto a "static", que es el valor por default.
+
+4- Stacking context: Contexto de apilamiento. Es el orden en el que se "superponen" o apilan los elementos en HTML.
+
+Posicionar
+
+Al posicionar un elemento se habilitan 5 propiedades que podemos usar para mover el elemento en 3 ejes: x, y, y z.
+
+Top- Moverá el elemento desde la parte superior.
+Right- Moverá el elemento desde la parte derecha.
+Bottom- Moverá el elemento desde la parte inferior.
+Left- Moverá el elemento desde la parte izquierda.
+
+-Los elementos tienen su punto de orígen (0,0) en la esquina superior izquierda.
+-La distancia a moverse indica en px y acepta números negativos.
+-Si a un elemento se le declara la propiedad "Top, su contraio deja de funcionar.
+-Si a un elemento se le declara la propiedad "Left", su contraio deja de funcionar.
+
+Z index: Nos va a permitir mover el elemento en el contexto de apilamiento. (eje z). Recibe valores en números o también llamados índices y permite valores negativos.
+
+-Lo recomendable para valores de z index, es decenas (10 en 10), o en centenas (100 en 100).
+
+Valores de Posición.
+
+Static- Valor por defaultde de los elementos. Con este valor, el elemento NO ESTÁ POSICIONADO y no podemos moverlo.
+
+Relative- El elemento mantiene su posición, mantiene sus medidas, mantiene su espacion reservado, y si lo movemos usará su contenedor como referencia.
+
+Absolute- El elemento perderá sus medidas y su espacio reservado. Si lo movemos los hará en función de su elemento contenedor posicionado y si no tienen alguno, los hará en función del elemento HTML.
+
+Fixed- Hace que el elemento pierda sus medidas y su espacio reservado. Si lo movemos usrá el elemento HTML como referencia  y quedará fijo aunque hagámos scroll.
+
+Sticky- Es una mezcla de Relative y Fixed. Con este valor las propiedades Top, Right, Bottom y left, no sirven para mover el elemento. Sirven para indicar en qué punto pasará a tener un comportamiento similar a Fixed.
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: deeppink;
+    background-color: rgb(255, 208, 0);
+    height: 5000px; /* Esto activa el scroll vertical */
+    /* width: 8000px; */ /* Esto activa el scroll horizontal */
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto; /* Centrar cajas de tipo bloque */
+    /* top: 200px;
+    left: 300px; */
+    background-color: rgb(98, 4, 67);
+    position: relative;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.box1 {
+    background-color: aqua;
+    position: static; /* Valor por default */
+    position: relative;
+
+    top: 100px;
+    left: 70px;
+
+    /* right: -100px;
+    bottom: -100px; */
+
+    z-index: 100;
+}
+
+.box2 {
+    background-color: blueviolet;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+
+    z-index: 200;
+}
+
+.box3 {
+    background-color: darkorange;
+    top: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+    height: 70;
+
+    z-index: 300;
+}
+
+.box4 {
+    background-color: rgb(0, 187, 255);
+    position: sticky;
+    top: 50px;
+    left: 100px;
+
+    z-index: 400;
+}
