@@ -1,0 +1,72 @@
+/* 
+
+Contexto de apilamiento
+
+Es un aspecto de los elementos que se vann apilando que uno se coloque delante de el otro.
+
+El navegador determina que elemento se colkoca sobre otro. Dependiendo de como se escriban en el HTML.
+
+Para el contexto del apilamiento se usará la siguiente jerarquía:
+
+1- Elementos posicionados con z-index o mayor a 1
+2- Elementos posicionados sin zindex con z-index: auto
+3- Elementos NO posicionados
+4- Elementos posicionados con z-index igual o menor a -1
+
+Propiedad z-index:
+Es lo que nos permite ordenar los elementos superpuestos y controlar el contexto de apilamientp. Para usar z-index el elemento debe estra posicionado.Es decir con la propiedad position declarada y con un valor distinto a static.
+
+Recomendaciones:
+
+1- No usar números consecutivos: 1, 2, 3, 4, 5...
+2- Se recomienda usar decenas o sentenas: 10, 20, 30... o 100, 200, 300...
+3- No usar n´´umeros en miles: 1000, 2000, 3000...
+
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(81, 11, 43);
+    background-color: violet;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    padding: 24px;
+    border: 1px solid purple;
+    border-radius: 24px;
+}
+
+.box-1{
+    position: relative;
+    top: 25px;
+    z-index: 1;
+    background-color: papayawhip;
+}
+
+.box-2{
+    position: relative;
+    z-index: auto; /* Igual a No declarado */
+    background-color: palevioletred;
+}
+
+.box-3{
+    margin-top: -25px;
+    background-color: paleturquoise;
+}
+
+.box-4{
+    position: relative;
+    top: -25px;
+    z-index: -1;
+    background-color: pink;
+}

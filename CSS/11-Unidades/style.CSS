@@ -1,0 +1,146 @@
+/* 
+
+Unidades en CSS
+
+Las unidades en CSS se dividen en 2 categorías prncipales:
+
+1- Unidades absolutas
+Mantienen valores fijos independientemente del dispositivo o contexto. Es decir, "siempre" tendrán el mismo valor sin importar el tipo de pantalla o contenedor.
+
+Son Útiles cuando se reqquiere presición en las medidas, pero no son ideales para diseño web responsivo.
+
+Las unidades absolutas más usadas son:
+
+-Px (Pixeles): Ésta unidad marca un punto en la pantalla. (1/96 de lin)
+
+Otras...
+
+-Cm: 1cm es igual a 96px / 2.54 lin
+
+-mm: 1/10 de 1cm
+
+-lin: 96px
+
+-pc (picas): 1/6 de lin
+
+-pt (puntos): 1/72 de lin
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px; /* Default */
+    font-size: 24px;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 24px;
+    padding: 0;
+    background-color: black;
+    color: pink;
+}
+
+h1, h2{
+    text-align: center;
+    margin-bottom: 24px;
+    color: hotpink;
+}
+
+section{
+    font-size: 24px;
+    margin: 48px 0;
+    padding: 24px;
+    border-radius: 1px solid white;
+    border-radius: 16px;
+    background-color: rgb(61, 1, 37);
+}
+
+.box{
+    text-align: center;
+    margin: 16px auto;
+    padding: 16px;
+    color: pink;
+}
+
+.px{
+    width: 200px;
+    height: 200px;
+    background-color: fuchsia;
+}
+
+.cm{
+    width: 5cm;
+    height: 5cm;
+    background-color: mediumvioletred;
+}
+
+.in{
+    width: 2in;
+    height: 2in;
+    background-color: purple;
+}
+
+/* 
+
+2- Unidades relativas
+Son unidades que adaptan sus valores en función del dispositivo o contexto. Es decir que cambiarán de acuerdo al área visible de la pantalla, contenedor u otro valor de referencia.
+
+Son útiles cuando necesitamos flexibilidad y son fáciles para el diseño responsivo.
+
+Las unidades más usadas son:
+
+-EM: Relativa alntamaño de fuente del elemento padre.
+-REM: Relativa al tamaño de fuente del elemento raíz o root, el HTML.
+-%: Es relativo al elemento padre.
+-Vw (Viewport Width): Relativo al ancho del área visible del navegador.
+-Vh (Viewport Heigth): Relativo al alto visible del navegador.
+-Vmin (Viewport Mínimo): Porcentaje relativo al lado más pequeño del área visible.
+-Vmax (Viewport Máximo): Relativo al lado más grande del navegador.
+
+*/
+
+article{
+     font-size: 10px;
+    margin: 48px 0;
+    padding: 24px;
+    border-radius: 1px solid white;
+    border-radius: 16px;
+    background-color: rgb(1, 40, 61);
+}
+
+.em{
+    width: 1em;
+    background-color: cyan;
+}
+
+.rem{
+    width: 6rem; /*  */
+    background-color: rgb(0, 145, 255);
+}
+
+.percent{
+    width: 50%;
+    background-color: rgb(4, 62, 169);
+}
+
+.vw{
+    background-color: rgb(25, 0, 188);
+}
+
+.vh{
+    background-color: rgb(14, 1, 137);
+}
+
+.vmin{
+    background-color: rgb(7, 0, 100);
+}
+
+.vmax{
+    background-color: rgb(10, 0, 74);
+}
