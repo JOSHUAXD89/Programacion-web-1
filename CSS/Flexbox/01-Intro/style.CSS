@@ -1,0 +1,23 @@
+/* 
+
+Flexbox
+
+Habilitamos las propiedades de Flexbox con display: Flex es el contenedor
+
+*/
+
+.container {
+    display: flex;
+    background-color: lightblue;
+    padding: 24px;
+}
+
+.item {
+    background-color: pink;
+}
+
+.item-flex {
+    display: flex;
+    padding: 12px;
+    background-color: aqua;
+}
