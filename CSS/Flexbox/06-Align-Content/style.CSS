@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: normal; /* Default */
+    align-content: flex-start;
+    align-content: flex-end;
+    align-content: center;
+    align-content: space-around;
+    align-content: space-between;
+    align-content: space-evenly;
+    align-content: stretch;
+    
+    gap: 24px; /* Espacio específico que podemos darle entre los elementos */
+    row-gap: 40px;
+    column-gap: 10px;
+
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    padding: 24px;
+    background-color: rgb(25, 25, 56);
+}
+
+.item {
+    width: 100px;
+   /*  height: 100px; */
+    font-size: 2rem;
+    text-align: center;
+    background-color: cornflowerblue;
+    border: 2px rgb(0, 238, 255);
+}
